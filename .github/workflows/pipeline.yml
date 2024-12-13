@@ -29,7 +29,7 @@ jobs:
         run: python -m unittest -v test
 
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@master  #https://github.com/marketplace/actions/sonarcloud-scan
+        uses: SonarSource/sonarqube-scan-action@v4  #https://github.com/marketplace/actions/sonarcloud-scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
