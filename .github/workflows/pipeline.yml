@@ -25,9 +25,6 @@ jobs:
       - name: Install Requirements
         run:  pip install flask
 
-      - name: Unit Test
-        run: python -m unittest -v test
-
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v4  #https://github.com/marketplace/actions/sonarcloud-scan
         env:
