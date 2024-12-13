@@ -12,7 +12,7 @@ def pagina_inicial():
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Test</title>
     </head>
-    <body style="background-color: #1e3c72; color: white; text-align: center; padding: 20px;">
+    <body style="background-color: black; color: white; text-align: center; padding: 20px;">
         <h1>Cloud & DevOps</h1>
         <p>Bem-vindo ao portfólio de Cristiano Feliciano da Silva.</p>
         <div class="gifs" style="margin-top: 20px; display: flex; justify-content: center; gap: 20px;">
@@ -25,4 +25,5 @@ def pagina_inicial():
     """
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
+
