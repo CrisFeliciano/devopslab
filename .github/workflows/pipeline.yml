@@ -61,3 +61,20 @@ jobs:
 
       - name: Validando a API
         run: 'curl "${{ steps.deploy.outputs.url }}"'
+    
+  DAST:
+      needs: Deploy
+      runs-on: ubuntu-latest
+      permissions:
+        contents: write
+        issues: write
+        pull-requests: write
+
+      steps:
+        - name: Download do Repositório
+          uses: actions/checkout@v4       # https://github.com/actions/checkout
+      
+        - name: DAST (ZAP Scan)
+          uses: zaproxy/action-full-scan@v0.12.0   #https://github.com/marketplace/actions/zap-full-scan
+          with:
+            target: 'https://crisfelicianoclc12-fgxq5tbfwq-ue.a.run.app'
